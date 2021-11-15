@@ -1,6 +1,6 @@
-export const getGifs = async( category ) => {
+export const getGifs = async( category, limit ) => {
         
-    const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI( category ) }&limit=10&api_key=Wv4yr5OXKVpUZ3WWJLls2U9MIMQP4mX4`;
+    const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI( category ) }&limit=${ limit }&api_key=Wv4yr5OXKVpUZ3WWJLls2U9MIMQP4mX4`;
     const resp = await fetch( url );
     const { data } = await resp.json();
 

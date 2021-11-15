@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import CategoryAdd from './components/CategoryAdd';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+const GifExpertApp = ({ defaultCategories = [] }) => {
 
-    const initialState = ['One Piece'];
-
-    const [ categories, setCategories ] = useState(initialState);
+    const [ categories, setCategories ] = useState( defaultCategories );
 
     return (
         <>
@@ -25,6 +23,8 @@ const GifExpertApp = () => {
                         <GifGrid
                             key={ category } 
                             category={ category }
+                            categories={ categories }
+                            setCategories={ setCategories }
                         />
                     )
                 }
@@ -34,12 +34,3 @@ const GifExpertApp = () => {
 };
 
 export default GifExpertApp;
-
-// <li key={ category }> { category } </li>
-
-// const handleDel = (e) => {
-//     const name = e.target.id;
-//     setCategories( categories.filter(el => el !== name) );
-// }
-
-/* <button className="cat-btnDel" id={category} onClick={ handleDel }> X </button> */

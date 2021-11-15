@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getGifs } from '../helpers/getGifs';
 
-export const useFetchGifs = ( category ) => {
+export const useFetchGifs = ( category, limit ) => {
     
     const [state, setState] = useState({
         data: [],
@@ -10,7 +10,7 @@ export const useFetchGifs = ( category ) => {
     
     useEffect( () => {
         
-        getGifs( category )
+        getGifs( category, limit )
             .then( imgs => {
                 
                 setState({
@@ -19,7 +19,7 @@ export const useFetchGifs = ( category ) => {
                 });
             });
 
-    }, [ category ]);
+    }, [ category, limit ]);
 
     return state;
 };

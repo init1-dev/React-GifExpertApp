@@ -13,23 +13,19 @@ const CategoryAdd = ({ categories, setCategories }) => {
         e.preventDefault();
 
         // This could be done as helper function
-        if( inputValue.trim().length > 2 && !undefined ) {
-            if(categories.includes(inputValue)) {
-                alert('This category already exist');
-                setInputValue('');
-            } else {
-                setCategories( cats => [ inputValue, ...cats ] );
-                setInputValue('');
-            }
-        }
+        if( inputValue.trim().length > 2 ) {
+            setCategories( cats => [ inputValue, ...cats ] );
+            setInputValue('');
+        };
     };
 
     return (
         <form onSubmit={ handleSubmit }>
+            {/* <p>{ inputValue }</p> */}
             <input
                 type="text"
-                name="categories"
-                id="categories"
+                // name="categories"
+                // id="categories"
                 placeholder="Search Categories"
                 value={ inputValue }
                 onChange={ handleInputChange }
@@ -41,6 +37,6 @@ const CategoryAdd = ({ categories, setCategories }) => {
 export default CategoryAdd;
 
 CategoryAdd.propTypes = {
-    categories: PropTypes.array.isRequired,
+    // categories: PropTypes.array.isRequired,
     setCategories: PropTypes.func.isRequired
 }
