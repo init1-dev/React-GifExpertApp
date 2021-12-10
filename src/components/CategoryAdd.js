@@ -14,7 +14,9 @@ const CategoryAdd = ({ categories, setCategories }) => {
 
         // This could be done as helper function
         if( inputValue.trim().length > 2 ) {
-            setCategories( cats => [ inputValue, ...cats ] );
+            const categoria = inputValue.toLowerCase();
+            !categories.includes(categoria) &&
+            setCategories( cats => [ categoria, ...cats ] );
             setInputValue('');
         };
     };

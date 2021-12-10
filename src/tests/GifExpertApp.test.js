@@ -8,5 +8,12 @@ describe('Pruebas en <GifExpertApp />', () => {
         expect( wrapper ).toMatchSnapshot();
     })
     
+    test('Debe mostrar una lista de categorías', () => {
+        const categories = ['One Piece', 'One Punch'];
+        const wrapper = shallow( <GifExpertApp defaultCategories={ categories } /> );
+
+        expect( wrapper ).toMatchSnapshot();
+        expect( wrapper.find('GifGrid').length ).toBe( categories.length );
+    });
     
-})
+});

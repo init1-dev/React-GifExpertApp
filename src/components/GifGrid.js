@@ -18,6 +18,7 @@ export const GifGrid = ({ category, categories, setCategories }) => {
             <h3 className="animate__animated animate__fadeIn">
                 { category }
                 <button className="cat-btnDel" id={category} onClick={ handleDel }> X </button>
+                <subtitle className="search-sub">(Click GIF to copy Url)</subtitle>
             </h3>
 
 

@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Pruebas en <GifExpertApp /> Debe mostrar una lista de categorías 1`] = `
+<Fragment>
+  <h2
+    className="title animate__animated animate__rubberBand"
+  >
+    GifExpertApp
+  </h2>
+  <CategoryAdd
+    categories={
+      Array [
+        "One Piece",
+        "One Punch",
+      ]
+    }
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      categories={
+        Array [
+          "One Piece",
+          "One Punch",
+        ]
+      }
+      category="One Piece"
+      key="One Piece"
+      setCategories={[Function]}
+    />
+    <GifGrid
+      categories={
+        Array [
+          "One Piece",
+          "One Punch",
+        ]
+      }
+      category="One Punch"
+      key="One Punch"
+      setCategories={[Function]}
+    />
+  </ol>
+</Fragment>
+`;
+
 exports[`Pruebas en <GifExpertApp /> Debe mostrarse correctamente 1`] = `
 <Fragment>
   <h2

@@ -15,8 +15,6 @@ const GifExpertApp = ({ defaultCategories = [] }) => {
             />
             <hr />
 
-            
-
             <ol>
                 {
                     categories.map( category =>
